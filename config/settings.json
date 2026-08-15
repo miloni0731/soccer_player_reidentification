@@ -1,0 +1,49 @@
+{
+  "detection": {
+    "background_threshold": 50,
+    "min_blob_area": 500,
+    "max_blob_area": 5000,
+    "gaussian_blur_kernel": 5,
+    "morphology_kernel": 3,
+    "history_frames": 500,
+    "var_threshold": 16,
+    "detect_shadows": true
+  },
+  "tracking": {
+    "color_bins": 32,
+    "optical_flow_threshold": 0.8,
+    "prediction_window": 5,
+    "lk_params": {
+      "winSize": [15, 15],
+      "maxLevel": 2,
+      "criteria": [3, 10, 0.03]
+    },
+    "max_tracking_distance": 100
+  },
+  "reidentification": {
+    "similarity_threshold": 0.75,
+    "max_frames_absent": 30,
+    "color_weight": 0.4,
+    "position_weight": 0.3,
+    "movement_weight": 0.3,
+    "min_track_length": 10
+  },
+  "visualization": {
+    "show_tracks": true,
+    "show_ids": true,
+    "show_bounding_boxes": true,
+    "trail_length": 20,
+    "colors": [
+      [255, 0, 0],
+      [0, 255, 0],
+      [0, 0, 255],
+      [255, 255, 0],
+      [255, 0, 255],
+      [0, 255, 255],
+      [128, 0, 128],
+      [255, 165, 0],
+      [0, 128, 128],
+      [128, 128, 0]
+    ]
+  }
+}
